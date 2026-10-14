@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ff7895">
+<title>إلى مِنّة ❤️</title>
+<style>
+:root{--pink:#ff6687;--deep:#a82d58;--cream:#fff8fb}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:Tahoma,Arial,sans-serif;color:#702542;background:linear-gradient(145deg,#ffd7e2 0%,#fff1f5 45%,#ffc2d2 100%);overflow-x:hidden}
+.hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.heart{position:absolute;bottom:-60px;color:#ff7895;opacity:.45;animation:float 12s linear infinite;font-size:24px}
+.heart:nth-child(1){left:8%;animation-delay:0s}.heart:nth-child(2){left:25%;animation-delay:3s;font-size:34px}.heart:nth-child(3){left:53%;animation-delay:1s}.heart:nth-child(4){left:76%;animation-delay:5s;font-size:30px}.heart:nth-child(5){left:91%;animation-delay:7s}
+@keyframes float{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+main{position:relative;z-index:1;min-height:100vh;display:grid;place-items:center;padding:24px}
+.card{width:min(100%,520px);text-align:center;background:rgba(255,255,255,.78);border:1px solid rgba(255,255,255,.9);border-radius:30px;padding:clamp(25px,6vw,46px);box-shadow:0 20px 60px #b33a6240;backdrop-filter:blur(8px)}
+.top{font-size:13px;letter-spacing:2px;color:#b34a6a}
+.big-heart{font-size:68px;line-height:1.25;filter:drop-shadow(0 7px 8px #ff789555);animation:pulse 1.7s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(1.1)}}
+h1{font-size:clamp(30px,7vw,42px);margin:12px 0;color:#b72f5b}
+.subtitle{font-size:18px;color:#98506a;margin:0 0 24px}
+.message{font-size:19px;line-height:2;margin:20px 0}
+button{font:inherit;font-weight:bold;border:0;border-radius:999px;padding:14px 24px;background:linear-gradient(100deg,#ff6487,#ec4777);color:white;box-shadow:0 8px 20px #ef59804d;cursor:pointer;transition:transform .2s}
+button:active{transform:scale(.97)}
+#secret{display:none;margin-top:25px;padding:20px;border-radius:20px;background:#fff0f5;line-height:2;font-size:19px;animation:appear .5s ease}
+@keyframes appear{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+footer{font-size:12px;color:#b66a82;margin-top:28px}
+.sparkle{color:#ed5b83}
+</style>
+</head>
+<body>
+<div class="hearts" aria-hidden="true"><span class="heart">♥</span><span class="heart">♥</span><span class="heart">♥</span><span class="heart">♥</span><span class="heart">♥</span></div>
+<main>
+<section class="card">
+<div class="top">A LITTLE MESSAGE FOR YOU</div>
+<div class="big-heart">❤️</div>
+<h1>إلى مِنّة الجميلة</h1>
+<p class="subtitle">في ناس وجودها بيخلّي الدنيا ألطف… وإنتِ منهم 🌷</p>
+<div class="message">يمكن الكلام ميكفيش يوصف قد إيه وجودك مميز،<br>بس حبيت أعملك حاجة صغيرة مخصوص علشانك.</div>
+<button id="open" type="button" onclick="document.getElementById('secret').style.display='block';this.style.display='none';">افتحي رسالتك يا مِنّة 💌</button>
+<div id="secret">يا مِنّة، أتمنى ضحكتك تفضل منوّرة أيامك،<br>وتفضلي دايمًا محاطة بالفرحة والحاجات الحلوة.<br><span class="sparkle">إنتِ تستاهلي كل خير ❤️🌹</span></div>
+<footer>اتعملت بكل حب <span class="sparkle">♥</span></footer>
+</section>
+</main>
+</body>
+</html>
