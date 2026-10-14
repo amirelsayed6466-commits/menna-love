@@ -1,123 +1,78 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#8b174d">
-  <title>هدية لمنّة ❤️</title>
-  <style>
-    :root{--pink:#ff6b9a;--deep:#5d1038;--cream:#fff4f7;--gold:#ffd78a}
-    *{box-sizing:border-box}
-    body{margin:0;min-height:100vh;font-family:Tahoma,Arial,sans-serif;color:#fff;background:radial-gradient(circle at 15% 15%,#a42a61 0,transparent 30%),radial-gradient(circle at 90% 80%,#4d174d 0,transparent 35%),linear-gradient(145deg,#260d2c,#73183f 55%,#2d123b);overflow-x:hidden}
-    .glow{position:fixed;inset:0;pointer-events:none;background:linear-gradient(120deg,transparent 30%,#ffffff08 50%,transparent 70%);z-index:0}
-    .floaters{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}
-    .floater{position:absolute;bottom:-50px;opacity:.25;animation:rise linear infinite;font-size:22px}
-    @keyframes rise{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
-    main{position:relative;z-index:1;width:min(720px,92%);margin:0 auto;padding:28px 0 50px}
-    .top{text-align:center;margin:10px 0 22px}.eyebrow{color:var(--gold);font-size:.9rem;letter-spacing:1px}
-    h1{font-size:clamp(2rem,8vw,3.4rem);margin:10px 0;color:#fff1f6;text-shadow:0 4px 25px #ff4f8d55}
-    .sub{color:#ffe0eb;line-height:1.9;margin:0 auto;max-width:520px}
-    .card{background:#fff9fc12;border:1px solid #ffffff2a;backdrop-filter:blur(10px);border-radius:26px;padding:clamp(20px,5vw,34px);box-shadow:0 18px 55px #16041655;margin:18px 0}
-    .lock{text-align:center}.lock .big{font-size:3rem}.lock p{line-height:1.9;color:#ffe5ed}
-    input{display:block;width:100%;max-width:360px;margin:14px auto;padding:14px 16px;border:1px solid #ffffff60;border-radius:14px;background:#fff;color:#54203a;font-size:1rem;text-align:center;outline:none}
-    button{font:inherit;border:0;border-radius:999px;padding:13px 22px;background:linear-gradient(135deg,#ff8aaf,#ffd0df);color:#601338;font-weight:bold;cursor:pointer;box-shadow:0 8px 22px #16041635;transition:transform .2s}
-    button:hover{transform:translateY(-2px)}button:active{transform:scale(.98)}
-    .error{min-height:22px;color:#ffd78a;font-size:.9rem}
-    .hidden{display:none!important}
-    .progress{height:7px;background:#ffffff25;border-radius:99px;overflow:hidden;margin:0 0 20px}.bar{height:100%;width:0;background:linear-gradient(90deg,#ffd78a,#ff77a4);transition:width .4s}
-    .step-label{color:var(--gold);font-size:.9rem}
-    h2{font-size:1.65rem;color:#ffe4ed;margin:10px 0 14px}
-    .message{font-size:1.08rem;line-height:2;color:#fff4f7;white-space:pre-line}
-    .rose{font-size:2.5rem;text-align:center;margin:10px}
-    .controls{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:22px}
-    .secondary{background:#ffffff18;color:white;border:1px solid #ffffff55;box-shadow:none}
-    .music-note{font-size:.85rem;color:#ffdce7;line-height:1.8;text-align:center;margin-top:12px}
-    footer{text-align:center;color:#ffdce7aa;font-size:.8rem;padding:20px}
-    .final-heart{font-size:4rem;animation:pulse 1.3s infinite}
-    @keyframes pulse{50%{transform:scale(1.12)}}
-    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>عيد ميلاد منّة 🎂❤️</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:Tahoma,Arial,sans-serif;color:#fff;text-align:center;overflow-x:hidden;background:linear-gradient(135deg,#ff83bd,#a88bff 55%,#ffd39b)}
+.wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:22px;position:relative;overflow:hidden}
+.card{position:relative;z-index:2;width:min(760px,100%);padding:30px 22px;border:2px solid #ffffff90;border-radius:28px;background:#ffffff2b;box-shadow:0 18px 60px #713d8050;backdrop-filter:blur(8px)}
+h1{font-size:clamp(2rem,7vw,3.4rem);margin:10px 0;color:#fff;text-shadow:0 4px 12px #b74b9c80}
+p{font-size:1.12rem;line-height:2}
+button,input{font:inherit;border:0;border-radius:14px;padding:13px 18px}
+button{cursor:pointer;background:#fff;color:#c13e8a;font-weight:bold;box-shadow:0 6px 18px #693c7a30;margin:8px}
+input{width:min(270px,100%);text-align:center;outline:2px solid #ffffff90;background:#fff;color:#57234e}
+.hidden{display:none}.hint{font-size:.9rem;opacity:.95}.cake{font-size:6rem;filter:drop-shadow(0 8px 8px #75385b55);animation:bounce 2s infinite}
+.message{font-size:1.25rem;font-weight:bold}
+.letter{background:#fff2;border:1px solid #ffffff70;border-radius:20px;padding:14px 18px;text-align:right;white-space:normal}
+.balloon{position:fixed;bottom:-120px;width:48px;height:62px;border-radius:50% 50% 45% 45%;opacity:.85;animation:floatUp linear infinite;z-index:1}
+.balloon:after{content:"";position:absolute;bottom:-10px;left:20px;border-width:10px 5px 0;border-style:solid;border-color:inherit transparent transparent}
+@keyframes floatUp{to{transform:translateY(-125vh) rotate(12deg)}}
+@keyframes bounce{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-10px) rotate(2deg)}}
+.confetti{position:fixed;top:-20px;width:9px;height:14px;z-index:4;animation:fall 4s linear infinite;pointer-events:none}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg)}}
+#status{min-height:25px;color:#fff5fa}
+</style>
 </head>
 <body>
-  <div class="glow"></div><div class="floaters" id="floaters"></div>
-  <main>
-    <header class="top">
-      <div class="eyebrow">✦ هدية صغيرة لقلب كبير ✦</div>
-      <h1>إلى منّة ❤️</h1>
-      <p class="sub">كل سنة وإنتِ طيبة يا منّة ❤️🎂 دي مفاجأة صغيرة مخصوص علشان عيد ميلادك… افتحي هديتك وخلي قلبك يكمّل المفاجأة.</p>
-    </header>
-
-    <section class="card lock" id="lock">
-      <div class="big">🎁</div>
-      <h2>هدية عيد ميلادك مستنياكي يا منّة 🎂</h2>
-      <p>الهدية دي ليكي إنتِ وبس 💗<br>اكتبي كلمة السر علشان نبدأ.</p>
-      <form id="passwordForm">
-        <input id="password" type="password" placeholder="كلمة السر" autocomplete="off" aria-label="كلمة السر" required>
-        <button type="submit">افتحي الهدية 💌</button>
-      </form>
-      <div class="error" id="error" aria-live="polite"></div>
-      <p class="music-note">معلومة: كلمة السر في نسخة الموقع الثابتة موجودة داخل ملف JavaScript، لذلك هي للمفاجأة فقط وليست حماية حقيقية.</p>
-    </section>
-
-    <section class="card hidden" id="gift" aria-live="polite">
-      <div class="progress"><div class="bar" id="bar"></div></div>
-      <div class="step-label" id="stepLabel">المفاجأة 1 من 4</div>
-      <div class="rose" id="emoji">🌹💗🌹</div>
-      <h2 id="stepTitle">كل سنة وإنتِ طيبة يا منّة</h2>
-      <div class="message" id="stepMessage"></div>
-      <div class="controls">
-        <button id="next">كمّلي المفاجأة ✨</button>
-        <button class="secondary" id="musicButton">▶️ شغّلي الموسيقى</button>
-      </div>
-      <div class="music-note" id="musicStatus">اضغطي على زر الموسيقى لتشغيل لحن هادئ.</div>
-    </section>
-
-    <footer>اتعملت بكل الحب ❤️ · عيد ميلاد سعيد يا منّة</footer>
-  </main>
-  <audio id="music" loop preload="none">
-    <source src="birthday-music.mp3" type="audio/mpeg">
-  </audio>
-  <script>
-    // كلمة السر للمفاجأة فقط. صفحات GitHub Pages عامة، فلا تضعي معلومات حساسة هنا.
-    const PASSWORD = "21/10/2006";
-    const steps = [
-      {emoji:"🎂✨🎈", title:"كل سنة وإنتِ طيبة يا منّة", message:"🎂❤️ كل سنة وإنتِ طيبة يا منّة، يا أجمل وأحنّ حاجة في الدنيا ❤️🌹\\n\\nالنهارده مش يوم عادي، النهارده يوم اتولدت فيه واحدة وجودها بيفرّح القلب، وضحكتها بتخلّي الدنيا أحلى. 🥹💗"},
-      {emoji:"🌹💗🌹", title:"أمنياتي ليكي في يومك", message:"كل سنة وإنتِ محققة كل اللي بتتمنيه، وكل سنة والفرحة ساكنة قلبك، والضحكة مش بتفارق وشك، وربنا يكتبلك أيام كلها خير وسعادة وراحة بال. 🎁✨"},
-      {emoji:"💌🦋💌", title:"مفاجأة معمولة من القلب", message:"يمكن الكلام مهما كان حلو مش هيقدر يوصف قد إيه إنتِ غالية، بس حبيت أعملك المفاجأة دي علشان يومك يبقى مميز وتفضلي فاكرة إن فيه حد بيتمنالك كل الخير والفرحة من قلبه. 💌"},
-      {emoji:"❤️🎁❤️", title:"عيد ميلاد سعيد يا منّة", message:"عيد ميلاد سعيد يا منّة، ويا رب كل سنينك الجاية تكون أجمل من اللي فاتت، وتفضلي دايمًا منوّرة الدنيا بضحكتك الحلوة. 🎂❤️🌹\\n\\nكل سنة وإنتِ حكاية جميلة، وكل سنة وإنتِ بخير يا منّة. 💖🎀"}
-    ];
-    const $ = id => document.getElementById(id);
-    const lock = $("lock"), gift = $("gift"), form = $("passwordForm");
-    let current = 0, musicOn = false;
-    form.addEventListener("submit", e => {
-      e.preventDefault();
-      if ($("password").value === PASSWORD) {
-        lock.classList.add("hidden"); gift.classList.remove("hidden"); renderStep(); burstHearts();
-      } else {
-        $("error").textContent = "الكلمة مش مظبوطة، جرّبي تاني يا جميلة 💗";
-        $("password").value = ""; $("password").focus();
-      }
-    });
-    function renderStep(){
-      const s = steps[current];
-      $("stepLabel").textContent = `المفاجأة ${current+1} من ${steps.length}`;
-      $("bar").style.width = `${((current+1)/steps.length)*100}%`;
-      $("emoji").textContent=s.emoji; $("stepTitle").textContent=s.title; $("stepMessage").textContent=s.message;
-      $("next").textContent = current === steps.length-1 ? "ابدئي من الأول 💞" : "كمّلي المفاجأة ✨";
-    }
-    $("next").addEventListener("click",()=>{current = current === steps.length-1 ? 0 : current+1;renderStep();burstHearts();});
-    $("musicButton").addEventListener("click", async()=>{
-      const audio=$("music");
-      if(!musicOn){
-        try{await audio.play();musicOn=true;$("musicButton").textContent="⏸️ إيقاف الموسيقى";$("musicStatus").textContent="لو مفيش صوت، ارفعي ملف birthday-music.mp3 في نفس مجلد الموقع."}
-        catch(err){$("musicStatus").textContent="لسه ملف الأغنية مش موجود أو المتصفح منع التشغيل. ارفعي ملف MP3 باسم birthday-music.mp3 بجانب index.html."}
-      }else{audio.pause();musicOn=false;$("musicButton").textContent="▶️ شغّلي الموسيقى";$("musicStatus").textContent="الموسيقى متوقفة مؤقتًا."}
-    });
-    function burstHearts(){
-      const root=$("floaters");
-      for(let i=0;i<12;i++){const el=document.createElement("span");el.className="floater";el.textContent=["💗","❤️","🌹","✨","💕"][Math.floor(Math.random()*5)];el.style.left=(Math.random()*100)+"%";el.style.animationDuration=(5+Math.random()*6)+"s";el.style.fontSize=(16+Math.random()*20)+"px";root.appendChild(el);setTimeout(()=>el.remove(),12000);}
-    }
-    for(let i=0;i<20;i++){const el=document.createElement("span");el.className="floater";el.textContent=["♥","♡","✿","✨"][i%4];el.style.left=(Math.random()*100)+"%";el.style.animationDuration=(9+Math.random()*14)+"s";el.style.animationDelay=(-Math.random()*15)+"s";el.style.fontSize=(12+Math.random()*22)+"px";$("floaters").appendChild(el);}
-  </script>
+<div class="wrap">
+<div class="card">
+<div id="lock">
+<div style="font-size:3rem">🎁💗🎈</div>
+<h1>مفاجأة عيد ميلاد منّة</h1>
+<p>فيه مفاجأة حلوة مستنياكي يا منّة! 🎂<br>اكتبي كلمة السر عشان تفتحي هديتك 💝</p>
+<input id="password" type="password" inputmode="numeric" placeholder="كلمة السر" aria-label="كلمة السر">
+<br><button onclick="unlock()">افتحي المفاجأة 🎁</button>
+<div id="status" role="status"></div>
+<p class="hint">💖 هدية صغيرة مخصوص ليكي 💖</p>
+</div>
+<div id="surprise" class="hidden">
+<div style="font-size:2.4rem">🎉🎈✨🎈🎉</div>
+<h1>كل سنة وإنتِ طيبة يا منّة! 🎂</h1>
+<div class="cake">🎂</div>
+<div class="letter">
+<p><strong>🎂❤️ كل سنة وإنتِ طيبة يا منّة، يا أجمل وأحنّ حاجة في الدنيا ❤️🌹</strong></p>
+<p>النهارده مش يوم عادي، النهارده يوم اتولدت فيه واحدة وجودها بيفرّح القلب، وضحكتها بتخلّي الدنيا أحلى. 🥹💗</p>
+<p>كل سنة وإنتِ محققة كل اللي بتتمنيه، وكل سنة والفرحة ساكنة قلبك، والضحكة مش بتفارق وشك، وربنا يكتبلك أيام كلها خير وسعادة وراحة بال. 🎁✨</p>
+<p>يمكن الكلام مهما كان حلو مش هيقدر يوصف قد إيه إنتِ غالية، بس حبيت أعملك المفاجأة دي علشان يومك يبقى مميز وتفضلي فاكرة إن فيه حد بيتمنالك كل الخير والفرحة من قلبه. 💌</p>
+<p>عيد ميلاد سعيد يا منّة، ويا رب كل سنينك الجاية تكون أجمل من اللي فاتت، وتفضلي دايمًا منوّرة الدنيا بضحكتك الحلوة. 🎂❤️🌹</p>
+<p><strong>كل سنة وإنتِ حكاية جميلة، وكل سنة وإنتِ بخير يا منّة. 💖🎀</strong></p>
+</div>
+<p>🎶 أغنية عيد الميلاد الخاصة بيكي يا منّة 🎶</p>
+<audio id="birthdayAudio" controls preload="metadata" style="width:min(100%,420px);margin:10px auto;display:block">
+  <source src="birthday_song.mp3" type="audio/mpeg">
+  المتصفح لا يدعم تشغيل الصوت.
+</audio>
+<p class="hint">اضغطي ▶️ لتشغيل الأغنية بعد فتح المفاجأة ❤️</p>
+<p class="hint">🎈 يومك كله فرحة وحب ومفاجآت حلوة 🎈</p>
+</div>
+</div>
+</div>
+<script>
+const PASS = "21102006";
+function unlock(){
+ const p=document.getElementById('password').value;
+ if(p===PASS){
+  document.getElementById('lock').classList.add('hidden');
+  document.getElementById('surprise').classList.remove('hidden');
+  makeConfetti();
+ }else document.getElementById('status').textContent='كلمة السر مش صحيحة، جرّبي تاني 💗';
+}
+document.getElementById('password').addEventListener('keydown',e=>{if(e.key==='Enter')unlock()});
+for(let i=0;i<18;i++){let b=document.createElement('div');b.className='balloon';b.style.left=(Math.random()*100)+'%';b.style.background=['#ff4f9a','#ffd166','#8bdbff','#a78bfa','#8ee3b2'][i%5];b.style.borderColor=b.style.background;b.style.animationDuration=(8+Math.random()*9)+'s';b.style.animationDelay=(-Math.random()*15)+'s';document.body.appendChild(b)}
+function makeConfetti(){for(let i=0;i<90;i++){let c=document.createElement('i');c.className='confetti';c.style.left=Math.random()*100+'%';c.style.background=['#fff','#ffe066','#ff4f9a','#8bdbff','#a78bfa'][i%5];c.style.animationDelay=Math.random()*4+'s';c.style.animationDuration=(2.5+Math.random()*3)+'s';document.body.appendChild(c)}}
+</script>
 </body>
 </html>
