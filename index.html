@@ -3,63 +3,71 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#180b14">
 <title>إلى مِنّة ❤️</title>
 <style>
-body {
-  margin: 0;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #ff758c, #ff7eb3, #ffc3a0);
-  color: white;
-}
-.card {
-  margin: 20px;
-  padding: 30px 20px;
-  max-width: 400px;
-  border-radius: 25px;
-  background: rgba(255,255,255,0.2);
-  box-shadow: 0 8px 30px #a52a2a44;
-}
-h1 { font-size: 35px; }
-p { font-size: 21px; line-height: 1.9; }
-button {
-  border: none;
-  border-radius: 30px;
-  padding: 14px 25px;
-  font-size: 18px;
-  background: white;
-  color: #e84368;
-  cursor: pointer;
-}
-#message {
-  display: none;
-  font-size: 22px;
-  line-height: 1.8;
-}
-.heart { font-size: 55px; }
+:root{--pink:#ff76a4;--pale:#ffd5e3;--dark:#170b13;--card:#27121f}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--dark);color:#fff0f6;font-family:Tahoma,Arial,sans-serif}
+nav{position:sticky;top:0;z-index:10;background:#160a12ed;border-bottom:1px solid #ff76a444;display:flex;justify-content:center;gap:clamp(12px,4vw,34px);padding:15px 10px;flex-wrap:wrap}
+nav a{color:#ffd5e3;text-decoration:none;font-size:14px}
+.brand{font-family:cursive;color:var(--pink);font-size:20px;font-weight:bold}
+.hero{min-height:80vh;display:grid;place-items:center;text-align:center;padding:55px 18px;background:linear-gradient(#180b1370,#180b13ed),url('romantic-cover.png') center/cover no-repeat}
+.hero-inner{max-width:720px}
+.kicker{letter-spacing:3px;color:var(--pink);font-size:12px}
+h1{font-size:clamp(42px,10vw,76px);color:#ff8ab2;margin:18px 0;text-shadow:0 4px 28px #ff397e66}
+.hero p{font-size:clamp(18px,4vw,24px);line-height:2}
+.btn{display:inline-block;border:0;border-radius:999px;padding:14px 24px;background:linear-gradient(100deg,#ff6d9c,#d93670);color:white;font-size:16px;font-weight:bold;text-decoration:none;cursor:pointer;box-shadow:0 8px 28px #e8437c44}
+section{padding:60px 18px;max-width:1050px;margin:auto}
+h2{text-align:center;color:var(--pink);font-size:clamp(27px,6vw,38px);margin:0 0 26px}
+.note{max-width:760px;margin:auto;padding:clamp(22px,5vw,42px);border-radius:22px;background:linear-gradient(145deg,#ffe1e9,#f7b8cc);color:#5b1d36;box-shadow:0 15px 40px #0005;font-size:19px;line-height:2.1;transform:rotate(-.4deg)}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:18px}
+.photo{background:#fff0f5;padding:10px 10px 18px;border-radius:5px;box-shadow:0 10px 30px #0006;transform:rotate(var(--tilt));color:#64243d;text-align:center}
+.photo img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;margin-bottom:12px}
+.photo span{font-size:15px}
+.player{max-width:620px;margin:auto;background:linear-gradient(135deg,#301326,#1c0b16);border:1px solid #ff76a455;border-radius:24px;padding:25px;text-align:center;box-shadow:0 14px 35px #0005}
+.disc{font-size:54px;animation:spin 7s linear infinite;display:inline-block}
+@keyframes spin{to{transform:rotate(360deg)}}
+audio{width:100%;margin-top:20px}
+.small{color:#d9a8bd;font-size:13px;line-height:1.8}
+.promise{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin-top:24px}
+.promise div{background:#291321;border:1px solid #ff76a433;padding:17px 10px;border-radius:15px;text-align:center;color:#ffd5e3}
+footer{text-align:center;padding:35px 15px;color:#ff9cbd;border-top:1px solid #ff76a433}
+.heart{color:#ff76a4}
+@media(max-width:480px){nav a{font-size:12px}.hero{min-height:72vh}}
 </style>
 </head>
 <body>
-<div class="card">
-  <div class="heart">❤️</div>
-  <h1>إلى مِنّة الجميلة ❤️</h1>
-  <p>
-    يا مِنّة، وجودك بيخلّي للحياة معنى أجمل،
-    وابتسامتك قادرة تخلّي يومي أحلى.
-    <br>
-    إنتِ حكاية جميلة أتمنى تفضل مكملة.
-  </p>
-  <button onclick="document.getElementById('message').style.display='block'; this.style.display='none';">
-    دوسي هنا يا مِنّة 💌
-  </button>
-  <div id="message">
-    كل يوم وإنتِ أجمل حاجة في الحكاية ❤️
-    <br>من شخص بيتمنالك كل السعادة 🌹
-  </div>
+<nav><a class="brand" href="#home">Menna ♥</a><a href="#home">الرئيسية</a><a href="#love">رسالة حب</a><a href="#photos">صورنا</a><a href="#music">الأغنية</a></nav>
+<header class="hero" id="home"><div class="hero-inner">
+<div class="kicker">A LITTLE WEBSITE MADE WITH LOVE</div>
+<h1>مِنّة ❤️</h1>
+<p>إنتِ مش مجرد اسم في حياتي…<br>إنتِ الحكاية الحلوة اللي نفسي تكمل على طول 🌹</p>
+<a class="btn" href="#love">افتحي رسالتك 💌</a>
+</div></header>
+<section id="love"><h2>رسالة مخصوص ليكي 💗</h2>
+<div class="note">
+<strong>يا مِنّة…</strong><br>
+من أول ما عرفتك، بقي في حاجات كتير أحلى. وجودك لوحده قادر يخلّي اليوم العادي مميز، وضحكتك عندي بالدنيا كلها.<br>
+يمكن الكلام ميكفيش اللي جوايا، بس حبيت أقولك إنك غالية، وإنّي بتمنالك فرحة على قد قلبك الجميل، وأيام مليانة راحة ونجاح وحاجات تفرّحك.<br>
+<strong>ربنا يخلّي ضحكتك منوّرة الدنيا دايمًا ❤️</strong>
 </div>
-</body>
-</html>
+<div class="promise"><div>♥ بحب ضحكتك</div><div>🌹 بتمنالك الخير</div><div>✨ وجودك مميز</div><div>💌 إنتِ غالية</div></div>
+</section>
+<section id="photos"><h2>لحظات وردية 🌷</h2>
+<div class="gallery">
+<div class="photo" style="--tilt:-2deg"><img src="romantic-cover.png" alt="غروب رومانسي وقلوب"><span>كل لحظة حلوة بتبدأ بابتسامة ❤️</span></div>
+<div class="photo" style="--tilt:2deg"><img src="romantic-cover.png" alt="ورود وذكريات رومانسية"><span>إنتِ حكاية جميلة 🌹</span></div>
+<div class="photo" style="--tilt:-1deg"><img src="romantic-cover.png" alt="أجواء حب دافئة"><span>أجمل الأمنيات ليكي ✨</span></div>
+</div>
+<p class="small" style="text-align:center;margin-top:18px">تقدر تبدّل الصور دي بصوركم الخاصة لاحقًا، مع الاحتفاظ بنفس التصميم.</p>
+</section>
+<section id="music"><h2>أغنية ليكي 🎵</h2><div class="player">
+<div class="disc">💿</div><h3>لحظة هدوء… ورسالة حب</h3>
+<p>ضيف ملف أغنية MP3 باسم <b>romantic-music.mp3</b> في نفس مكان ملف الموقع، وهتشتغل من هنا.</p>
+<audio controls preload="metadata"><source src="romantic-music.mp3" type="audio/mpeg">متصفحك لا يدعم تشغيل الصوت.</audio>
+<p class="small">ملاحظة: الأغنية مش مرفقة تلقائيًا؛ ارفع ملف الصوت اللي تختاره إلى المستودع بنفس الاسم عشان يسمعه أي حد يفتح الموقع.</p>
+</div></section>
+<footer>اتعملت مخصوص لمِنّة <span class="heart">♥</span><br><span class="small">FOREVER & ALWAYS</span></footer>
+</body></html>
