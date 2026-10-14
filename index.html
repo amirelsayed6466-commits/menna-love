@@ -1,73 +1,123 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#180b14">
-<title>إلى مِنّة ❤️</title>
-<style>
-:root{--pink:#ff76a4;--pale:#ffd5e3;--dark:#170b13;--card:#27121f}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--dark);color:#fff0f6;font-family:Tahoma,Arial,sans-serif}
-nav{position:sticky;top:0;z-index:10;background:#160a12ed;border-bottom:1px solid #ff76a444;display:flex;justify-content:center;gap:clamp(12px,4vw,34px);padding:15px 10px;flex-wrap:wrap}
-nav a{color:#ffd5e3;text-decoration:none;font-size:14px}
-.brand{font-family:cursive;color:var(--pink);font-size:20px;font-weight:bold}
-.hero{min-height:80vh;display:grid;place-items:center;text-align:center;padding:55px 18px;background:linear-gradient(#180b1370,#180b13ed),url('romantic-cover.png') center/cover no-repeat}
-.hero-inner{max-width:720px}
-.kicker{letter-spacing:3px;color:var(--pink);font-size:12px}
-h1{font-size:clamp(42px,10vw,76px);color:#ff8ab2;margin:18px 0;text-shadow:0 4px 28px #ff397e66}
-.hero p{font-size:clamp(18px,4vw,24px);line-height:2}
-.btn{display:inline-block;border:0;border-radius:999px;padding:14px 24px;background:linear-gradient(100deg,#ff6d9c,#d93670);color:white;font-size:16px;font-weight:bold;text-decoration:none;cursor:pointer;box-shadow:0 8px 28px #e8437c44}
-section{padding:60px 18px;max-width:1050px;margin:auto}
-h2{text-align:center;color:var(--pink);font-size:clamp(27px,6vw,38px);margin:0 0 26px}
-.note{max-width:760px;margin:auto;padding:clamp(22px,5vw,42px);border-radius:22px;background:linear-gradient(145deg,#ffe1e9,#f7b8cc);color:#5b1d36;box-shadow:0 15px 40px #0005;font-size:19px;line-height:2.1;transform:rotate(-.4deg)}
-.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:18px}
-.photo{background:#fff0f5;padding:10px 10px 18px;border-radius:5px;box-shadow:0 10px 30px #0006;transform:rotate(var(--tilt));color:#64243d;text-align:center}
-.photo img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;margin-bottom:12px}
-.photo span{font-size:15px}
-.player{max-width:620px;margin:auto;background:linear-gradient(135deg,#301326,#1c0b16);border:1px solid #ff76a455;border-radius:24px;padding:25px;text-align:center;box-shadow:0 14px 35px #0005}
-.disc{font-size:54px;animation:spin 7s linear infinite;display:inline-block}
-@keyframes spin{to{transform:rotate(360deg)}}
-audio{width:100%;margin-top:20px}
-.small{color:#d9a8bd;font-size:13px;line-height:1.8}
-.promise{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin-top:24px}
-.promise div{background:#291321;border:1px solid #ff76a433;padding:17px 10px;border-radius:15px;text-align:center;color:#ffd5e3}
-footer{text-align:center;padding:35px 15px;color:#ff9cbd;border-top:1px solid #ff76a433}
-.heart{color:#ff76a4}
-@media(max-width:480px){nav a{font-size:12px}.hero{min-height:72vh}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#8b174d">
+  <title>هدية لمنّة ❤️</title>
+  <style>
+    :root{--pink:#ff6b9a;--deep:#5d1038;--cream:#fff4f7;--gold:#ffd78a}
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;font-family:Tahoma,Arial,sans-serif;color:#fff;background:radial-gradient(circle at 15% 15%,#a42a61 0,transparent 30%),radial-gradient(circle at 90% 80%,#4d174d 0,transparent 35%),linear-gradient(145deg,#260d2c,#73183f 55%,#2d123b);overflow-x:hidden}
+    .glow{position:fixed;inset:0;pointer-events:none;background:linear-gradient(120deg,transparent 30%,#ffffff08 50%,transparent 70%);z-index:0}
+    .floaters{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+    .floater{position:absolute;bottom:-50px;opacity:.25;animation:rise linear infinite;font-size:22px}
+    @keyframes rise{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+    main{position:relative;z-index:1;width:min(720px,92%);margin:0 auto;padding:28px 0 50px}
+    .top{text-align:center;margin:10px 0 22px}.eyebrow{color:var(--gold);font-size:.9rem;letter-spacing:1px}
+    h1{font-size:clamp(2rem,8vw,3.4rem);margin:10px 0;color:#fff1f6;text-shadow:0 4px 25px #ff4f8d55}
+    .sub{color:#ffe0eb;line-height:1.9;margin:0 auto;max-width:520px}
+    .card{background:#fff9fc12;border:1px solid #ffffff2a;backdrop-filter:blur(10px);border-radius:26px;padding:clamp(20px,5vw,34px);box-shadow:0 18px 55px #16041655;margin:18px 0}
+    .lock{text-align:center}.lock .big{font-size:3rem}.lock p{line-height:1.9;color:#ffe5ed}
+    input{display:block;width:100%;max-width:360px;margin:14px auto;padding:14px 16px;border:1px solid #ffffff60;border-radius:14px;background:#fff;color:#54203a;font-size:1rem;text-align:center;outline:none}
+    button{font:inherit;border:0;border-radius:999px;padding:13px 22px;background:linear-gradient(135deg,#ff8aaf,#ffd0df);color:#601338;font-weight:bold;cursor:pointer;box-shadow:0 8px 22px #16041635;transition:transform .2s}
+    button:hover{transform:translateY(-2px)}button:active{transform:scale(.98)}
+    .error{min-height:22px;color:#ffd78a;font-size:.9rem}
+    .hidden{display:none!important}
+    .progress{height:7px;background:#ffffff25;border-radius:99px;overflow:hidden;margin:0 0 20px}.bar{height:100%;width:0;background:linear-gradient(90deg,#ffd78a,#ff77a4);transition:width .4s}
+    .step-label{color:var(--gold);font-size:.9rem}
+    h2{font-size:1.65rem;color:#ffe4ed;margin:10px 0 14px}
+    .message{font-size:1.08rem;line-height:2;color:#fff4f7;white-space:pre-line}
+    .rose{font-size:2.5rem;text-align:center;margin:10px}
+    .controls{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:22px}
+    .secondary{background:#ffffff18;color:white;border:1px solid #ffffff55;box-shadow:none}
+    .music-note{font-size:.85rem;color:#ffdce7;line-height:1.8;text-align:center;margin-top:12px}
+    footer{text-align:center;color:#ffdce7aa;font-size:.8rem;padding:20px}
+    .final-heart{font-size:4rem;animation:pulse 1.3s infinite}
+    @keyframes pulse{50%{transform:scale(1.12)}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+  </style>
 </head>
 <body>
-<nav><a class="brand" href="#home">Menna ♥</a><a href="#home">الرئيسية</a><a href="#love">رسالة حب</a><a href="#photos">صورنا</a><a href="#music">الأغنية</a></nav>
-<header class="hero" id="home"><div class="hero-inner">
-<div class="kicker">A LITTLE WEBSITE MADE WITH LOVE</div>
-<h1>مِنّة ❤️</h1>
-<p>إنتِ مش مجرد اسم في حياتي…<br>إنتِ الحكاية الحلوة اللي نفسي تكمل على طول 🌹</p>
-<a class="btn" href="#love">افتحي رسالتك 💌</a>
-</div></header>
-<section id="love"><h2>رسالة مخصوص ليكي 💗</h2>
-<div class="note">
-<strong>يا مِنّة…</strong><br>
-من أول ما عرفتك، بقي في حاجات كتير أحلى. وجودك لوحده قادر يخلّي اليوم العادي مميز، وضحكتك عندي بالدنيا كلها.<br>
-يمكن الكلام ميكفيش اللي جوايا، بس حبيت أقولك إنك غالية، وإنّي بتمنالك فرحة على قد قلبك الجميل، وأيام مليانة راحة ونجاح وحاجات تفرّحك.<br>
-<strong>ربنا يخلّي ضحكتك منوّرة الدنيا دايمًا ❤️</strong>
-</div>
-<div class="promise"><div>♥ بحب ضحكتك</div><div>🌹 بتمنالك الخير</div><div>✨ وجودك مميز</div><div>💌 إنتِ غالية</div></div>
-</section>
-<section id="photos"><h2>لحظات وردية 🌷</h2>
-<div class="gallery">
-<div class="photo" style="--tilt:-2deg"><img src="romantic-cover.png" alt="غروب رومانسي وقلوب"><span>كل لحظة حلوة بتبدأ بابتسامة ❤️</span></div>
-<div class="photo" style="--tilt:2deg"><img src="romantic-cover.png" alt="ورود وذكريات رومانسية"><span>إنتِ حكاية جميلة 🌹</span></div>
-<div class="photo" style="--tilt:-1deg"><img src="romantic-cover.png" alt="أجواء حب دافئة"><span>أجمل الأمنيات ليكي ✨</span></div>
-</div>
-<p class="small" style="text-align:center;margin-top:18px">تقدر تبدّل الصور دي بصوركم الخاصة لاحقًا، مع الاحتفاظ بنفس التصميم.</p>
-</section>
-<section id="music"><h2>أغنية ليكي 🎵</h2><div class="player">
-<div class="disc">💿</div><h3>لحظة هدوء… ورسالة حب</h3>
-<p>ضيف ملف أغنية MP3 باسم <b>romantic-music.mp3</b> في نفس مكان ملف الموقع، وهتشتغل من هنا.</p>
-<audio controls preload="metadata"><source src="romantic-music.mp3" type="audio/mpeg">متصفحك لا يدعم تشغيل الصوت.</audio>
-<p class="small">ملاحظة: الأغنية مش مرفقة تلقائيًا؛ ارفع ملف الصوت اللي تختاره إلى المستودع بنفس الاسم عشان يسمعه أي حد يفتح الموقع.</p>
-</div></section>
-<footer>اتعملت مخصوص لمِنّة <span class="heart">♥</span><br><span class="small">FOREVER & ALWAYS</span></footer>
-</body></html>
+  <div class="glow"></div><div class="floaters" id="floaters"></div>
+  <main>
+    <header class="top">
+      <div class="eyebrow">✦ هدية صغيرة لقلب كبير ✦</div>
+      <h1>إلى منّة ❤️</h1>
+      <p class="sub">كل سنة وإنتِ طيبة يا منّة ❤️🎂 دي مفاجأة صغيرة مخصوص علشان عيد ميلادك… افتحي هديتك وخلي قلبك يكمّل المفاجأة.</p>
+    </header>
+
+    <section class="card lock" id="lock">
+      <div class="big">🎁</div>
+      <h2>هدية عيد ميلادك مستنياكي يا منّة 🎂</h2>
+      <p>الهدية دي ليكي إنتِ وبس 💗<br>اكتبي كلمة السر علشان نبدأ.</p>
+      <form id="passwordForm">
+        <input id="password" type="password" placeholder="كلمة السر" autocomplete="off" aria-label="كلمة السر" required>
+        <button type="submit">افتحي الهدية 💌</button>
+      </form>
+      <div class="error" id="error" aria-live="polite"></div>
+      <p class="music-note">معلومة: كلمة السر في نسخة الموقع الثابتة موجودة داخل ملف JavaScript، لذلك هي للمفاجأة فقط وليست حماية حقيقية.</p>
+    </section>
+
+    <section class="card hidden" id="gift" aria-live="polite">
+      <div class="progress"><div class="bar" id="bar"></div></div>
+      <div class="step-label" id="stepLabel">المفاجأة 1 من 4</div>
+      <div class="rose" id="emoji">🌹💗🌹</div>
+      <h2 id="stepTitle">كل سنة وإنتِ طيبة يا منّة</h2>
+      <div class="message" id="stepMessage"></div>
+      <div class="controls">
+        <button id="next">كمّلي المفاجأة ✨</button>
+        <button class="secondary" id="musicButton">▶️ شغّلي الموسيقى</button>
+      </div>
+      <div class="music-note" id="musicStatus">اضغطي على زر الموسيقى لتشغيل لحن هادئ.</div>
+    </section>
+
+    <footer>اتعملت بكل الحب ❤️ · عيد ميلاد سعيد يا منّة</footer>
+  </main>
+  <audio id="music" loop preload="none">
+    <source src="birthday-music.mp3" type="audio/mpeg">
+  </audio>
+  <script>
+    // كلمة السر للمفاجأة فقط. صفحات GitHub Pages عامة، فلا تضعي معلومات حساسة هنا.
+    const PASSWORD = "21/10/2006";
+    const steps = [
+      {emoji:"🎂✨🎈", title:"كل سنة وإنتِ طيبة يا منّة", message:"🎂❤️ كل سنة وإنتِ طيبة يا منّة، يا أجمل وأحنّ حاجة في الدنيا ❤️🌹\\n\\nالنهارده مش يوم عادي، النهارده يوم اتولدت فيه واحدة وجودها بيفرّح القلب، وضحكتها بتخلّي الدنيا أحلى. 🥹💗"},
+      {emoji:"🌹💗🌹", title:"أمنياتي ليكي في يومك", message:"كل سنة وإنتِ محققة كل اللي بتتمنيه، وكل سنة والفرحة ساكنة قلبك، والضحكة مش بتفارق وشك، وربنا يكتبلك أيام كلها خير وسعادة وراحة بال. 🎁✨"},
+      {emoji:"💌🦋💌", title:"مفاجأة معمولة من القلب", message:"يمكن الكلام مهما كان حلو مش هيقدر يوصف قد إيه إنتِ غالية، بس حبيت أعملك المفاجأة دي علشان يومك يبقى مميز وتفضلي فاكرة إن فيه حد بيتمنالك كل الخير والفرحة من قلبه. 💌"},
+      {emoji:"❤️🎁❤️", title:"عيد ميلاد سعيد يا منّة", message:"عيد ميلاد سعيد يا منّة، ويا رب كل سنينك الجاية تكون أجمل من اللي فاتت، وتفضلي دايمًا منوّرة الدنيا بضحكتك الحلوة. 🎂❤️🌹\\n\\nكل سنة وإنتِ حكاية جميلة، وكل سنة وإنتِ بخير يا منّة. 💖🎀"}
+    ];
+    const $ = id => document.getElementById(id);
+    const lock = $("lock"), gift = $("gift"), form = $("passwordForm");
+    let current = 0, musicOn = false;
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      if ($("password").value === PASSWORD) {
+        lock.classList.add("hidden"); gift.classList.remove("hidden"); renderStep(); burstHearts();
+      } else {
+        $("error").textContent = "الكلمة مش مظبوطة، جرّبي تاني يا جميلة 💗";
+        $("password").value = ""; $("password").focus();
+      }
+    });
+    function renderStep(){
+      const s = steps[current];
+      $("stepLabel").textContent = `المفاجأة ${current+1} من ${steps.length}`;
+      $("bar").style.width = `${((current+1)/steps.length)*100}%`;
+      $("emoji").textContent=s.emoji; $("stepTitle").textContent=s.title; $("stepMessage").textContent=s.message;
+      $("next").textContent = current === steps.length-1 ? "ابدئي من الأول 💞" : "كمّلي المفاجأة ✨";
+    }
+    $("next").addEventListener("click",()=>{current = current === steps.length-1 ? 0 : current+1;renderStep();burstHearts();});
+    $("musicButton").addEventListener("click", async()=>{
+      const audio=$("music");
+      if(!musicOn){
+        try{await audio.play();musicOn=true;$("musicButton").textContent="⏸️ إيقاف الموسيقى";$("musicStatus").textContent="لو مفيش صوت، ارفعي ملف birthday-music.mp3 في نفس مجلد الموقع."}
+        catch(err){$("musicStatus").textContent="لسه ملف الأغنية مش موجود أو المتصفح منع التشغيل. ارفعي ملف MP3 باسم birthday-music.mp3 بجانب index.html."}
+      }else{audio.pause();musicOn=false;$("musicButton").textContent="▶️ شغّلي الموسيقى";$("musicStatus").textContent="الموسيقى متوقفة مؤقتًا."}
+    });
+    function burstHearts(){
+      const root=$("floaters");
+      for(let i=0;i<12;i++){const el=document.createElement("span");el.className="floater";el.textContent=["💗","❤️","🌹","✨","💕"][Math.floor(Math.random()*5)];el.style.left=(Math.random()*100)+"%";el.style.animationDuration=(5+Math.random()*6)+"s";el.style.fontSize=(16+Math.random()*20)+"px";root.appendChild(el);setTimeout(()=>el.remove(),12000);}
+    }
+    for(let i=0;i<20;i++){const el=document.createElement("span");el.className="floater";el.textContent=["♥","♡","✿","✨"][i%4];el.style.left=(Math.random()*100)+"%";el.style.animationDuration=(9+Math.random()*14)+"s";el.style.animationDelay=(-Math.random()*15)+"s";el.style.fontSize=(12+Math.random()*22)+"px";$("floaters").appendChild(el);}
+  </script>
+</body>
+</html>
