@@ -3,45 +3,94 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#180b20">
 <title>عيد ميلاد منّة 🎂❤️</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;min-height:100vh;font-family:Tahoma,Arial,sans-serif;color:#fff;text-align:center;overflow-x:hidden;background:linear-gradient(135deg,#ff83bd,#a88bff 55%,#ffd39b)}
-.wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:22px;position:relative;overflow:hidden}
-.card{position:relative;z-index:2;width:min(760px,100%);padding:30px 22px;border:2px solid #ffffff90;border-radius:28px;background:#ffffff2b;box-shadow:0 18px 60px #713d8050;backdrop-filter:blur(8px)}
-h1{font-size:clamp(2rem,7vw,3.4rem);margin:10px 0;color:#fff;text-shadow:0 4px 12px #b74b9c80}
-p{font-size:1.12rem;line-height:2}
-button,input{font:inherit;border:0;border-radius:14px;padding:13px 18px}
-button{cursor:pointer;background:#fff;color:#c13e8a;font-weight:bold;box-shadow:0 6px 18px #693c7a30;margin:8px}
-input{width:min(270px,100%);text-align:center;outline:2px solid #ffffff90;background:#fff;color:#57234e}
-.hidden{display:none}.hint{font-size:.9rem;opacity:.95}.cake{font-size:6rem;filter:drop-shadow(0 8px 8px #75385b55);animation:bounce 2s infinite}
-.message{font-size:1.25rem;font-weight:bold}
-.letter{background:#fff2;border:1px solid #ffffff70;border-radius:20px;padding:14px 18px;text-align:right;white-space:normal}
-.balloon{position:fixed;bottom:-120px;width:48px;height:62px;border-radius:50% 50% 45% 45%;opacity:.85;animation:floatUp linear infinite;z-index:1}
-.balloon:after{content:"";position:absolute;bottom:-10px;left:20px;border-width:10px 5px 0;border-style:solid;border-color:inherit transparent transparent}
+:root{--pink:#ff69b4;--rose:#ffc0dc;--gold:#ffd27a}
+body{margin:0;min-height:100vh;font-family:Tahoma,Arial,sans-serif;color:#fff;text-align:center;background:radial-gradient(ellipse at top,#552044 0%,#1b0b20 48%,#09080f 100%);overflow-x:hidden}
+.wrap{width:100%;padding:20px 14px 42px;position:relative;isolation:isolate}
+.wrap:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.24;background-image:radial-gradient(#ffb4d9 1px,transparent 1px),radial-gradient(#ffd27a 1px,transparent 1px);background-size:37px 37px,61px 61px;background-position:0 0,18px 20px;z-index:-1}
+.card{width:min(760px,100%);margin:0 auto 20px;padding:24px 17px;border:1px solid #ff9bce88;border-radius:24px;background:#160e1dcc;box-shadow:0 12px 42px #0008}
+h1{font-size:clamp(2rem,8vw,3.3rem);margin:12px 0;color:#ff9bd0;text-shadow:0 0 20px #ff4aa7aa}
+h2{color:#ffc1de;font-size:1.45rem}
+p{font-size:1.08rem;line-height:2}
+button,input{font:inherit;border-radius:999px;padding:13px 18px}
+button{cursor:pointer;border:0;background:linear-gradient(90deg,#ff4fa7,#ffc0df);color:#3c102c;font-weight:bold;box-shadow:0 5px 22px #ff4fa755;margin:8px}
+input{width:min(290px,100%);text-align:center;border:1px solid var(--pink);background:#100b17;color:#fff;outline:none}
+.hidden{display:none!important}.hint{font-size:.9rem;color:#ffd7eb}.cake{font-size:6rem;filter:drop-shadow(0 8px 8px #ff4f9a55);animation:bounce 2s infinite}
+.letter{background:linear-gradient(145deg,#ffe2ee,#ffb9d9);color:#47142f;border-radius:18px;padding:18px 17px;text-align:right;box-shadow:0 12px 35px #0005}
+.letter p{font-size:1rem;line-height:2.15}
+.balloon{position:fixed;bottom:-120px;width:42px;height:56px;border-radius:50% 50% 45% 45%;opacity:.8;animation:floatUp linear infinite;z-index:-1}
+.balloon:after{content:"";position:absolute;bottom:-10px;left:18px;border-width:10px 5px 0;border-style:solid;border-color:inherit transparent transparent}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0}
+.photo{min-height:145px;border:5px solid #ffe6f1;background:linear-gradient(145deg,#ff8dbd,#692c73);border-radius:8px;box-shadow:0 8px 20px #0008;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(-2deg);padding:10px}
+.photo:nth-child(even){transform:rotate(2deg);background:linear-gradient(145deg,#ffcf82,#b53d79)}
+.photo .emoji{font-size:3.4rem}.photo span:last-child{font-size:.9rem;color:#fff;font-weight:bold;text-shadow:0 1px 4px #000}
+.age{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:14px 0}
+.agebox{padding:12px 4px;border-radius:14px;border:1px solid #ff8bc3;background:#30142f}
+.agebox strong{display:block;font-size:clamp(1.1rem,4vw,1.7rem);color:#ff9bce;font-variant-numeric:tabular-nums}
+.agebox small{font-size:.78rem;color:#ffe3f0}
+.confetti{position:fixed;top:-20px;width:8px;height:13px;z-index:5;animation:fall 4s linear infinite;pointer-events:none}
 @keyframes floatUp{to{transform:translateY(-125vh) rotate(12deg)}}
 @keyframes bounce{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-10px) rotate(2deg)}}
-.confetti{position:fixed;top:-20px;width:9px;height:14px;z-index:4;animation:fall 4s linear infinite;pointer-events:none}
 @keyframes fall{to{transform:translateY(110vh) rotate(720deg)}}
-#status{min-height:25px;color:#fff5fa}
+@media(min-width:560px){.gallery{grid-template-columns:repeat(4,minmax(0,1fr))}.photo{min-height:165px}}
 </style>
 </head>
 <body>
 <div class="wrap">
-<div class="card">
-<div id="lock">
-<div style="font-size:3rem">🎁💗🎈</div>
-<h1>مفاجأة عيد ميلاد منّة</h1>
-<p>فيه مفاجأة حلوة مستنياكي يا منّة! 🎂<br>اكتبي كلمة السر عشان تفتحي هديتك 💝</p>
+<section class="card" id="lock">
+<div style="font-size:3rem">🎈🎁🎈</div>
+<h1>عيد ميلاد منّة</h1>
+<p>مفاجأة حلوة مستنياكي يا منّة 🎂❤️<br>اكتبي كلمة السر عشان تفتحي هديتك 💝</p>
 <input id="password" type="password" inputmode="numeric" placeholder="كلمة السر" aria-label="كلمة السر">
 <br><button onclick="unlock()">افتحي المفاجأة 🎁</button>
 <div id="status" role="status"></div>
-<p class="hint">💖 هدية صغيرة مخصوص ليكي 💖</p>
-</div>
-<div id="surprise" class="hidden">
-<div style="font-size:2.4rem">🎉🎈✨🎈🎉</div>
+<p class="hint">💖 هدية مخصوص ليكي 💖</p>
+</section>
+
+<main id="surprise" class="hidden">
+<section class="card">
+<div style="font-size:2.2rem">🎉🎈✨🎈🎉</div>
 <h1>كل سنة وإنتِ طيبة يا منّة! 🎂</h1>
 <div class="cake">🎂</div>
+<p class="hint">النهارده يومك يا أجمل منّة ❤️🌹</p>
+</section>
+
+<section class="card">
+<h2>🎶 أغنية عيد ميلاد منّة 🎶</h2>
+<p>الأغنية هتبدأ بعد فتح المفاجأة، ولو المتصفح منع التشغيل اضغطي ▶️</p>
+<audio id="birthdayAudio" controls autoplay preload="auto" style="width:100%;max-width:480px">
+ <source src="birthday_song.mp3" type="audio/mpeg">
+ المتصفح لا يدعم تشغيل الصوت.
+</audio>
+</section>
+
+<section class="card">
+<h2>🎈 لحظات من السعادة 🎈</h2>
+<div class="gallery">
+<div class="photo"><span class="emoji">🎂🕯️</span><span>كيكة عيد الميلاد</span></div>
+<div class="photo"><span class="emoji">🌹💝</span><span>ورد وهدية</span></div>
+<div class="photo"><span class="emoji">🎈🎊</span><span>بلونات واحتفال</span></div>
+<div class="photo"><span class="emoji">🧸🎁</span><span>مفاجأة من القلب</span></div>
+</div>
+</section>
+
+<section class="card">
+<h2>⏳ عمر منّة دلوقتي</h2>
+<p class="hint">من يوم 21 أكتوبر 2006، والعداد بيتحدّث كل ثانية ❤️</p>
+<div class="age">
+<div class="agebox"><strong id="years">—</strong><small>سنة</small></div>
+<div class="agebox"><strong id="months">—</strong><small>شهر</small></div>
+<div class="agebox"><strong id="days">—</strong><small>يوم</small></div>
+<div class="agebox"><strong id="clock">00:00:00</strong><small>ساعة:دقيقة:ثانية</small></div>
+</div>
+<p id="nextBirthday" class="hint"></p>
+</section>
+
+<section class="card">
+<h2>💌 رسالة مخصوص لمنّة</h2>
 <div class="letter">
 <p><strong>🎂❤️ كل سنة وإنتِ طيبة يا منّة، يا أجمل وأحنّ حاجة في الدنيا ❤️🌹</strong></p>
 <p>النهارده مش يوم عادي، النهارده يوم اتولدت فيه واحدة وجودها بيفرّح القلب، وضحكتها بتخلّي الدنيا أحلى. 🥹💗</p>
@@ -50,28 +99,50 @@ input{width:min(270px,100%);text-align:center;outline:2px solid #ffffff90;backgr
 <p>عيد ميلاد سعيد يا منّة، ويا رب كل سنينك الجاية تكون أجمل من اللي فاتت، وتفضلي دايمًا منوّرة الدنيا بضحكتك الحلوة. 🎂❤️🌹</p>
 <p><strong>كل سنة وإنتِ حكاية جميلة، وكل سنة وإنتِ بخير يا منّة. 💖🎀</strong></p>
 </div>
-<p>🎶 أغنية عيد الميلاد الخاصة بيكي يا منّة 🎶</p>
-<audio id="birthdayAudio" controls preload="metadata" style="width:min(100%,420px);margin:10px auto;display:block">
-  <source src="birthday_song.mp3" type="audio/mpeg">
-  المتصفح لا يدعم تشغيل الصوت.
-</audio>
-<p class="hint">اضغطي ▶️ لتشغيل الأغنية بعد فتح المفاجأة ❤️</p>
-<p class="hint">🎈 يومك كله فرحة وحب ومفاجآت حلوة 🎈</p>
+<div class="gallery">
+<div class="photo"><span class="emoji">🎉🎂</span><span>يومك أحلى يوم</span></div>
+<div class="photo"><span class="emoji">💗🎈</span><span>فرحة من القلب</span></div>
 </div>
-</div>
+<p class="hint">💗 اسحبي لتحت عشان تشوفي كل المفاجأة 💗</p>
+</section>
+</main>
 </div>
 <script>
-const PASS = "21102006";
+const PASS="21102006";
 function unlock(){
  const p=document.getElementById('password').value;
  if(p===PASS){
   document.getElementById('lock').classList.add('hidden');
   document.getElementById('surprise').classList.remove('hidden');
-  makeConfetti();
+  makeConfetti(); updateAge(); setInterval(updateAge,1000);
+  const audio=document.getElementById('birthdayAudio');
+  audio.play().catch(()=>{document.querySelector('#surprise audio').scrollIntoView({behavior:'smooth',block:'center'});});
+  document.getElementById('surprise').scrollIntoView({behavior:'smooth',block:'start'});
  }else document.getElementById('status').textContent='كلمة السر مش صحيحة، جرّبي تاني 💗';
 }
 document.getElementById('password').addEventListener('keydown',e=>{if(e.key==='Enter')unlock()});
 for(let i=0;i<18;i++){let b=document.createElement('div');b.className='balloon';b.style.left=(Math.random()*100)+'%';b.style.background=['#ff4f9a','#ffd166','#8bdbff','#a78bfa','#8ee3b2'][i%5];b.style.borderColor=b.style.background;b.style.animationDuration=(8+Math.random()*9)+'s';b.style.animationDelay=(-Math.random()*15)+'s';document.body.appendChild(b)}
+function updateAge(){
+ const birth=new Date(2006,9,21,0,0,0), now=new Date();
+ let y=now.getFullYear()-birth.getFullYear(), m=now.getMonth()-birth.getMonth(), d=now.getDate()-birth.getDate();
+ if(d<0){m--;d+=new Date(now.getFullYear(),now.getMonth(),0).getDate()}
+ if(m<0){y--;m+=12}
+ document.getElementById('years').textContent=y;
+ document.getElementById('months').textContent=m;
+ document.getElementById('days').textContent=d;
+ const lastBirthday=new Date(birth.getFullYear()+y,birth.getMonth()+m,birth.getDate()+d);
+ let elapsed=Math.max(0,now-lastBirthday);
+ const hh=Math.floor(elapsed/3600000); elapsed%=3600000;
+ const mm=Math.floor(elapsed/60000); elapsed%=60000;
+ const ss=Math.floor(elapsed/1000);
+ document.getElementById('clock').textContent=[hh,mm,ss].map(v=>String(v).padStart(2,'0')).join(':');
+ let next=new Date(now.getFullYear(),9,21);
+ if(next<=now)next=new Date(now.getFullYear()+1,9,21);
+ let diff=Math.ceil((next-now)/86400000);
+ document.getElementById('nextBirthday').textContent='فاضل '+diff+' يوم على عيد ميلادك الجاي 🎂';
+}
+let ageTimer=null;
+function startAge(){if(ageTimer)clearInterval(ageTimer);updateAge();ageTimer=setInterval(updateAge,1000)}
 function makeConfetti(){for(let i=0;i<90;i++){let c=document.createElement('i');c.className='confetti';c.style.left=Math.random()*100+'%';c.style.background=['#fff','#ffe066','#ff4f9a','#8bdbff','#a78bfa'][i%5];c.style.animationDelay=Math.random()*4+'s';c.style.animationDuration=(2.5+Math.random()*3)+'s';document.body.appendChild(c)}}
 </script>
 </body>
