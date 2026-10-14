@@ -77,14 +77,16 @@ input{width:min(290px,100%);text-align:center;border:1px solid var(--pink);backg
 </div>
 </section>
 
-<section class="card">
-<h2>⏳ عمر منّة دلوقتي</h2>
-<p class="hint">من يوم 21 أكتوبر 2006، والعداد بيتحدّث كل ثانية ❤️</p>
+<section class="card" id="ageCounter">
+<h2>🎂 عدّاد عمر منّة ❤️</h2>
+<p class="hint">من يوم 21 أكتوبر 2006، والعداد بيتحدّث كل ثانية</p>
 <div class="age">
 <div class="agebox"><strong id="years">—</strong><small>سنة</small></div>
 <div class="agebox"><strong id="months">—</strong><small>شهر</small></div>
 <div class="agebox"><strong id="days">—</strong><small>يوم</small></div>
-<div class="agebox"><strong id="clock">00:00:00</strong><small>ساعة:دقيقة:ثانية</small></div>
+<div class="agebox"><strong id="hours">00</strong><small>ساعة</small></div>
+<div class="agebox"><strong id="minutes">00</strong><small>دقيقة</small></div>
+<div class="agebox"><strong id="seconds">00</strong><small>ثانية</small></div>
 </div>
 <p id="nextBirthday" class="hint"></p>
 </section>
@@ -114,7 +116,7 @@ function unlock(){
  if(p===PASS){
   document.getElementById('lock').classList.add('hidden');
   document.getElementById('surprise').classList.remove('hidden');
-  makeConfetti(); updateAge(); setInterval(updateAge,1000);
+  makeConfetti(); updateAge(); if (!window.ageCounterTimer) window.ageCounterTimer = setInterval(updateAge,1000);
   const audio=document.getElementById('birthdayAudio');
   audio.play().catch(()=>{document.querySelector('#surprise audio').scrollIntoView({behavior:'smooth',block:'center'});});
   document.getElementById('surprise').scrollIntoView({behavior:'smooth',block:'start'});
@@ -123,26 +125,42 @@ function unlock(){
 document.getElementById('password').addEventListener('keydown',e=>{if(e.key==='Enter')unlock()});
 for(let i=0;i<18;i++){let b=document.createElement('div');b.className='balloon';b.style.left=(Math.random()*100)+'%';b.style.background=['#ff4f9a','#ffd166','#8bdbff','#a78bfa','#8ee3b2'][i%5];b.style.borderColor=b.style.background;b.style.animationDuration=(8+Math.random()*9)+'s';b.style.animationDelay=(-Math.random()*15)+'s';document.body.appendChild(b)}
 function updateAge(){
- const birth=new Date(2006,9,21,0,0,0), now=new Date();
- let y=now.getFullYear()-birth.getFullYear(), m=now.getMonth()-birth.getMonth(), d=now.getDate()-birth.getDate();
- if(d<0){m--;d+=new Date(now.getFullYear(),now.getMonth(),0).getDate()}
- if(m<0){y--;m+=12}
- document.getElementById('years').textContent=y;
- document.getElementById('months').textContent=m;
- document.getElementById('days').textContent=d;
- const lastBirthday=new Date(birth.getFullYear()+y,birth.getMonth()+m,birth.getDate()+d);
- let elapsed=Math.max(0,now-lastBirthday);
- const hh=Math.floor(elapsed/3600000); elapsed%=3600000;
- const mm=Math.floor(elapsed/60000); elapsed%=60000;
- const ss=Math.floor(elapsed/1000);
- document.getElementById('clock').textContent=[hh,mm,ss].map(v=>String(v).padStart(2,'0')).join(':');
- let next=new Date(now.getFullYear(),9,21);
- if(next<=now)next=new Date(now.getFullYear()+1,9,21);
- let diff=Math.ceil((next-now)/86400000);
- document.getElementById('nextBirthday').textContent='فاضل '+diff+' يوم على عيد ميلادك الجاي 🎂';
+ const birth = new Date(2006, 9, 21, 0, 0, 0);
+ const now = new Date();
+ if (now < birth) return;
+
+ let years = now.getFullYear() - birth.getFullYear();
+ let months = now.getMonth() - birth.getMonth();
+ let days = now.getDate() - birth.getDate();
+ let hours = now.getHours() - birth.getHours();
+ let minutes = now.getMinutes() - birth.getMinutes();
+ let seconds = now.getSeconds() - birth.getSeconds();
+
+ if (seconds < 0) { seconds += 60; minutes--; }
+ if (minutes < 0) { minutes += 60; hours--; }
+ if (hours < 0) { hours += 24; days--; }
+ if (days < 0) {
+   const prevMonthDays = new Date(now.getFullYear(), now.getMonth(), 0).getDate();
+   days += prevMonthDays;
+   months--;
+ }
+ if (months < 0) { months += 12; years--; }
+
+ document.getElementById('years').textContent = years;
+ document.getElementById('months').textContent = months;
+ document.getElementById('days').textContent = days;
+ document.getElementById('hours').textContent = String(hours).padStart(2,'0');
+ document.getElementById('minutes').textContent = String(minutes).padStart(2,'0');
+ document.getElementById('seconds').textContent = String(seconds).padStart(2,'0');
+
+ let next = new Date(now.getFullYear(), 9, 21);
+ if (next <= now) next = new Date(now.getFullYear()+1, 9, 21);
+ const diff = next - now;
+ const leftDays = Math.floor(diff / 86400000);
+ const leftHours = Math.floor((diff % 86400000) / 3600000);
+ document.getElementById('nextBirthday').textContent =
+   'فاضل ' + leftDays + ' يوم و' + leftHours + ' ساعة على عيد ميلادك الجاي 🎈';
 }
-let ageTimer=null;
-function startAge(){if(ageTimer)clearInterval(ageTimer);updateAge();ageTimer=setInterval(updateAge,1000)}
 function makeConfetti(){for(let i=0;i<90;i++){let c=document.createElement('i');c.className='confetti';c.style.left=Math.random()*100+'%';c.style.background=['#fff','#ffe066','#ff4f9a','#8bdbff','#a78bfa'][i%5];c.style.animationDelay=Math.random()*4+'s';c.style.animationDuration=(2.5+Math.random()*3)+'s';document.body.appendChild(c)}}
 </script>
 </body>
